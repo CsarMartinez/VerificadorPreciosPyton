@@ -15,12 +15,11 @@ def key_pressed(event):
         codigo = ""
         if Datos["Status"] == 200:
             # loads the img from the product
-            loadImg(".img/productos" + Datos["Imagen"])
+            loadImg(".img/" + Datos["Imagen"])
             labelProd.config(text= Datos["Nombre"])
             labelPrice.config(text=Datos["Precio"])
             labelDesc.config(text=Datos["Descripcion"])
         else:
-            loadImg(".img/error.gif")
             labelProd.config(text= "No existe")
             labelPrice.config(text="")
             labelDesc.config(text="")
